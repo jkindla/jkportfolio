@@ -190,7 +190,18 @@
         <div class="contact-form">
 
           <div id="form-messages"></div>
-          <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+          <form id="ajax-contact" method="post" role="form" action="https://formsubmit.co/joshkindla@gmail.com" data-toggle="validator">
+            <!--HONEYPOT-->
+            <input type="text" name="_honey" style="display: none">
+
+            <!-- Disable Captcha -->
+             <input type="hidden" name="_captcha" value="false">
+
+
+             <!-- <input type="hidden" name="_next" value=""> -->
+
+
+
             <div class="form-group has-feedback wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
               <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
               <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -254,7 +265,7 @@
 <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.29/dist/fullpage.min.js"></script>
 
 <!-- Your custom script -->
-<script src="/script.js"></script>
+<script src="script.js"></script>
 
 
 </div>
