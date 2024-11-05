@@ -92,7 +92,10 @@
     <div class="section problem" data-anchor="about">
         <div class="content">
           <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">WHAT'S THE PROBLEM?</h1>
-       <!--    <p class="wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">.</p> -->
+
+          <div class="carousel-container">
+
+          
           <div class="blog-card wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">
             <div class="meta">
               <div class="photo" style="background-image: url(images/problem.png)"></div>
@@ -126,6 +129,16 @@
               
               
             </div>
+          </div>
+
+          <!-- Navigation Buttons Container Below Cards -->
+    <div class="carousel-controls">
+      <button class="carousel-btn left-btn" onclick="showCard(currentIndex - 1)">&#10094;</button>
+      <button class="carousel-btn right-btn" onclick="showCard(currentIndex + 1)">&#10095;</button>
+  </div>
+
+
+
           </div>
   
           

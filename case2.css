@@ -647,6 +647,20 @@ body {
     font-size: 1rem;
     line-height: 1.6;
   }
+
+    /* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Hide the right content on screens smaller than 768px */
+  .split-image {
+      display: none;
+  }
+
+  /* Make the left image fill the entire width */
+  .split-content {
+      flex: 1 1 100%;
+  }
+}
+
   
 
   .portfolio {

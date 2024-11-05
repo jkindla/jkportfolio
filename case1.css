@@ -518,6 +518,63 @@ body {
     }
   }
 
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-container .blog-card {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Hide carousel controls on larger screens */
+@media (min-width: 640px) {
+  .carousel-controls {
+      display: none;
+  }
+
+  .carousel-container {
+      display: block;
+  }
+
+  .carousel-container .blog-card {
+      min-width: auto;
+      transition: none;
+  }
+}
+
+/* Position the controls container at the bottom, only visible on mobile */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn:focus {
+  outline: none;
+}
+
+
   #humane {
     opacity: 1;
     transition: .5s ease;
@@ -643,7 +700,23 @@ body {
     font-size: 1rem;
     line-height: 1.6;
   }
-  
+
+
+
+  /* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Hide the right content on screens smaller than 768px */
+  .split-image {
+      display: none;
+  }
+
+  /* Make the left image fill the entire width */
+  .split-content {
+      flex: 1 1 100%;
+  }
+}
+
+
 
   .portfolio {
     display: flex;

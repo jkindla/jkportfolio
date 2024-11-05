@@ -70,8 +70,53 @@ $(document).ready(function () {
         $(this).addClass("active");
         
      });
-     
 
+
+
+     let currentIndex = 0;
+
+     function showCard(index) {
+         const cards = document.querySelectorAll('.carousel-container .blog-card');
+         const container = document.querySelector('.carousel-container');
+     
+         // Loop to the start or end if index is out of bounds
+         if (index >= cards.length) {
+             currentIndex = 0;
+         } else if (index < 0) {
+             currentIndex = cards.length - 1;
+         } else {
+             currentIndex = index;
+         }
+     
+         // Shift carousel to show the current card
+         container.style.transform = `translateX(-${currentIndex * 100}%)`;
+     }
+     
+     // Swipe event handling for mobile
+     document.querySelector('.carousel-container').addEventListener('touchstart', handleTouchStart, false);
+     document.querySelector('.carousel-container').addEventListener('touchmove', handleTouchMove, false);
+     
+     let x1 = null;
+     
+     function handleTouchStart(evt) {
+         x1 = evt.touches[0].clientX;
+     }
+     
+     function handleTouchMove(evt) {
+         if (!x1) return;
+     
+         let x2 = evt.touches[0].clientX;
+         let xDiff = x1 - x2;
+     
+         if (xDiff > 0) {
+             // Swipe left
+             showCard(currentIndex + 1);
+         } else {
+             // Swipe right
+             showCard(currentIndex - 1);
+         }
+         x1 = null; // Reset touch start position
+     }
     // Initiate full page scroll
     $("#fullpage").fullpage({
       licenseKey: '62M8J-W6OQK-8I757-06NH9-XDKTQ', // Add your license key here
