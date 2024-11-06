@@ -368,7 +368,7 @@ body {
   .blog-card .meta {
     position: relative;
     z-index: 0;
-    height: 200px;
+    height: 50px;
   }
   .blog-card .photo {
     position: absolute;

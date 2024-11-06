@@ -50,33 +50,8 @@ $(document).ready(function () {
   });
 
   // Carousel Functionality
-  let currentIndex = 0;
 
-  function showCard(index) {
-      const cards = document.querySelectorAll('.carousel-container .blog-card');
-      const container = document.querySelector('.carousel-container');
   
-      // Loop to the start or end if index is out of bounds
-      if (index >= cards.length) {
-          currentIndex = 0;
-      } else if (index < 0) {
-          currentIndex = cards.length - 1;
-      } else {
-          currentIndex = index;
-      }
-
-      // Shift carousel to show the current card
-      container.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  // Event listeners for the carousel navigation buttons
-  $(".carousel-btn.left-btn").click(function () {
-      showCard(currentIndex - 1);
-  });
-
-  $(".carousel-btn.right-btn").click(function () {
-      showCard(currentIndex + 1);
-  });
 
   // Initiate full page scroll
   $("#fullpage").fullpage({
@@ -116,8 +91,7 @@ $(document).ready(function () {
     $.fn.fullpage.moveTo(4);
   });
 
-  // Ajax form handling
-  var form = $("#ajax-contact");
-  var formMessages = $("#form-messages");
+  
+ 
 
 });
