@@ -16,7 +16,7 @@ $(document).ready(function () {
   })(jQuery);
 
   // Input text for typing animation
-  $("#holder").writeText("UX DESIGNER + FRONT-END DEVELOPER");
+  $("#holder").writeText("DESIGNER • DEVELOPER • STRATEGIST");
 
   // Initialize wow.js
   new WOW().init();

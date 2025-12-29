@@ -1098,3 +1098,93 @@ body {
 }
 
   
+/* ===============================
+   Case 4 – Alkaline Water hero image
+   (neat, centered screenshot on dark backdrop)
+   =============================== */
+.case-alkaline .split-image.bg-image {
+  background-image: url("images/alaline.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Keep the screenshot contained instead of zoomed/cropped */
+  background-size: min(80%, 520px) auto;
+
+  /* "Stage" behind the screenshot */
+  background-color: #0f0f0f;
+}
+
+/* Slightly larger on wide screens while still contained */
+@media (min-width: 1200px) {
+  .case-alkaline .split-image.bg-image {
+    background-size: min(82%, 620px) auto;
+  }
+}
+.case-screenshots {
+  background: #0f0f0f;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+}
+
+.case-screenshots img.case-shot {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.55),
+    0 0 0 1px rgba(255,255,255,.04);
+}
+
+
+/* ===============================
+   fullPage.js – mobile overflow fix (Case 4 only)
+   Prevents content from being cut off / overlapping on small screens
+   =============================== */
+@media (max-width: 900px) {
+  /* Disable fullPage table layout for Case 4 sections so they can grow naturally */
+  #fullpage .section.case-alkaline.fp-table,
+  #fullpage .section.case-beforeafter.fp-table {
+    display: block !important;
+    height: auto !important;
+  }
+
+  #fullpage .section.case-alkaline .fp-tableCell,
+  #fullpage .section.case-beforeafter .fp-tableCell {
+    display: block !important;
+    height: auto !important;
+  }
+
+  /* Allow scrolling within these sections if content exceeds viewport */
+  #fullpage .section.case-alkaline,
+  #fullpage .section.case-beforeafter {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Some fullPage versions wrap content in these; let them expand */
+  #fullpage .section.case-alkaline .fp-overflow,
+  #fullpage .section.case-alkaline .fp-scroller,
+  #fullpage .section.case-beforeafter .fp-overflow,
+  #fullpage .section.case-beforeafter .fp-scroller {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Hero: let the layout breathe on mobile (image is hidden already) */
+  .case-alkaline .split-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .case-alkaline .split-content {
+    padding: 28px 22px;
+  }
+
+  /* Add extra bottom padding so the last element isn't clipped */
+  .case-alkaline .split-content,
+  .case-beforeafter .content {
+    padding-bottom: 3rem;
+  }
+}

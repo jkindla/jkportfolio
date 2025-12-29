@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alkaline Water SATX Redesign Case Study - Josh Kindla Designs</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://kit.fontawesome.com/6940dda587.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.29/dist/fullpage.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Shared case study styles -->
+  <link rel="stylesheet" href="case2.css">
+
+  <!-- Case 4: compact Before/After screenshot styling -->
+  <style>
+    .case-beforeafter .ba-grid {
+      max-width: 980px;
+      margin: 1.25rem auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .case-beforeafter .ba-card {
+      display: block;
+      text-decoration: none;
+      background: #0f0f0f;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    .case-beforeafter .ba-card:hover {
+      transform: translateY(-2px);
+      transition: transform 0.2s ease;
+    }
+
+    .case-beforeafter .ba-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-beforeafter .ba-label {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .case-beforeafter .ba-hint {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .case-beforeafter .ba-shot {
+      display: block;
+      width: 100%;
+      max-height: 34vh;
+      object-fit: contain;
+      border-radius: 12px;
+      background: transparent;
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .case-beforeafter .ba-note {
+      max-width: 980px;
+      margin: 0.75rem auto 0;
+      font-size: 14px;
+      color: rgba(72, 72, 72, 0.9);
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .case-beforeafter .ba-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-beforeafter .ba-shot {
+        max-height: 30vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="loader"></div>
+
+  <div id="content">
+
+    <div class="nav-header">
+      <div class="nav-brand">
+        <a href="index.html" aria-label="Back to portfolio home">
+          <img src="images/logo1.png" alt="Josh Kindla Designs logo">
+        </a>
+      </div>
+      <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+      <div class="header-links">
+        <ul>
+          <li data-menuanchor="fourthPage"><a href="#contact">REDESIGN BREAKDOWN</a></li>
+          <li data-menuanchor="thirdPage"><a href="#portfolio">BEFORE/AFTER</a></li>
+          <li data-menuanchor="secondPage"><a href="#about">OVERVIEW</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-screen">
+      <i class="fa fa-times fa-3x" aria-hidden="true"></i>
+      <div class="nav-container">
+        <div class="nav-links">
+          <ul id='myMenu'>
+            <li data-menuanchor="secondPage"><a href="#about">OVERVIEW</a></li>
+            <li data-menuanchor="thirdPage"><a href="#portfolio">BEFORE/AFTER</a></li>
+            <li data-menuanchor="fourthPage"><a href="#contact">REDESIGN BREAKDOWN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="fullpage">
+
+      <!-- HERO -->
+      <div class="section aboutme case-alkaline" data-anchor="aboutme">
+        <div class="split-container">
+          <div class="split-image bg-image"></div>
+
+          <div class="split-content">
+            <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="1.2s">ALKALINE WATER SATX</h1>
+            <h2 class="wow animate__animated animate__fadeInDown" data-wow-delay="1.35s">Homepage Redesign (UX/UI + Front-End)</h2>
+
+            <p class="wow animate__animated animate__fadeInDown" data-wow-delay="1.55s">
+              A modernized redesign focused on clarity, credibility, and conversion-friendly calls-to-action — shipped as a working build.
+            </p>
+
+            <div class="case-ctas wow animate__animated animate__fadeInDown" data-wow-delay="1.8s">
+              <a href="https://jkindla.github.io/alkalinewatersatx/" class="btn inside" target="_blank" rel="noopener">View Redesign</a>
+            </div>
+          </div>
+        </div>
+
+        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce" aria-hidden="true"></i>
+      </div>
+
+
+      <!-- OVERVIEW -->
+      <div class="section problem" data-anchor="about">
+        <div class="content">
+          <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">OVERVIEW</h1>
+
+          <div class="blog-card wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">
+            <div class="meta">
+              <div class="photo" style="background-image: url(images/problem.png)"></div>
+              <ul class="details">
+                <li class="date">Goal</li>
+                <p class="innerdialogue">
+                  Improve scannability, strengthen trust, and make the primary actions obvious (contact / learn / order) — especially on mobile.
+                </p>
+              </ul>
+            </div>
+            <div class="description">
+              <h1>What I noticed</h1>
+              <p class="outerdialogue">
+                The original site had good intent, but key info was competing for attention. The hierarchy made it harder for users to quickly
+                understand the offer and take action.
+              </p>
+            </div>
+          </div>
+
+          <div class="blog-card alt wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">
+            <div class="meta">
+              <div class="photo" style="background-image: url(images/solution.png)"></div>
+              <ul class="details">
+                <li class="date">Deliverable</li>
+                <p class="innerdialogue">
+                  A working redesign with cleaner structure, clearer messaging, stronger CTA placement, and improved layout rhythm.
+                </p>
+              </ul>
+            </div>
+            <div class="description">
+              <h1>What I shipped</h1>
+              <p class="outerdialogue">
+                A modern homepage redesign built with lightweight front-end code. The layout prioritizes clarity and credibility while keeping a clean,
+                local brand feel.
+              </p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+
+      <!-- BEFORE / AFTER -->
+      <div class="section portfolio case-beforeafter" data-anchor="portfolio">
+        <div class="content">
+          <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">BEFORE / AFTER</h1>
+          <p class="wow animate__animated animate__fadeInDown" data-wow-delay="0.25s">
+            Quick comparison: original site vs redesigned homepage.
+          </p>
+
+          <div class="about-bullets wow animate__animated animate__fadeInUp" data-wow-delay="0.3s"
+            style="max-width: 980px; margin: 1.5rem auto 0; text-align:left;">
+            <div class="bullet">
+              <h3>Original</h3>
+              <p>Reference point for structure + messaging.</p>
+            </div>
+
+            <div class="bullet">
+              <h3>Redesign</h3>
+              <p>Improved hierarchy, CTA clarity, and mobile-first layout.</p>
+            </div>
+          </div>
+
+          <div class="ba-grid" aria-label="Before and after screenshots">
+
+            <a class="ba-card" href="images/alkalineafter.png" target="_blank" rel="noopener"
+              aria-label="Open full-size screenshot of the original homepage">
+              <div class="ba-card-head">
+                <span class="ba-label">Original homepage</span>
+                <span class="ba-hint">Open full site →</span>
+              </div>
+              <img class="ba-shot" src="images/alkalineafter.png" alt="Screenshot of the original Alkaline Water SATX homepage" loading="lazy">
+            </a>
+
+            <a class="ba-card" href="images/alaline.png" target="_blank" rel="noopener"
+              aria-label="Open full-size screenshot of the redesigned homepage">
+              <div class="ba-card-head">
+                <span class="ba-label">Redesigned homepage</span>
+                <span class="ba-hint">Open full site →</span>
+              </div>
+              <img class="ba-shot" src="images/alaline.png" alt="Screenshot of the redesigned Alkaline Water SATX homepage" loading="lazy">
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- REDESIGN BREAKDOWN -->
+      <div class="section" data-anchor="contact">
+        <div class="content-slide">
+          <div class="slide">
+            <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">REDESIGN BREAKDOWN</h1>
+            <p class="wow animate__animated animate__fadeInDown" data-wow-delay="0.25s">
+              This was an implementation-first redesign (no formal research artifacts). The goal was shipping practical UX improvements that make the
+              site feel clearer and more trustworthy.
+            </p>
+
+            <div class="about-bullets wow animate__animated animate__fadeInUp" data-wow-delay="0.3s"
+              style="max-width: 980px; margin: 2rem auto 0; text-align:left;">
+              <div class="bullet">
+                <h3>Information hierarchy</h3>
+                <p>Reordered content so users can quickly understand the offer and what to do next.</p>
+              </div>
+              <div class="bullet">
+                <h3>CTA clarity</h3>
+                <p>Consistent, obvious actions with better visual priority and placement.</p>
+              </div>
+              <div class="bullet">
+                <h3>Mobile-first layout</h3>
+                <p>Improved spacing, readability, and tap targets for a smoother phone experience.</p>
+              </div>
+              <div class="bullet">
+                <h3>Trust + credibility</h3>
+                <p>Surfaced trust cues earlier to reduce hesitation and support decision making.</p>
+              </div>
+              <div class="bullet">
+                <h3>SEO-minded structure</h3>
+                <p>Cleaner headings and content blocks that support scanning + semantic structure.</p>
+              </div>
+            </div>
+
+            <div class="project-actions" style="margin-top: 1.75rem;">
+              <a href="https://jkindla.github.io/alkalinewatersatx/" target="_blank" rel="noopener"
+                class="btn btn-outline project-btn">View live redesign →</a>
+              <a href="https://alkalinewatersatx.com/" target="_blank" rel="noopener" class="btn btn-outline project-btn">View original →</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.29/dist/fullpage.min.js"></script>
+    <script src="case2.js"></script>
+
+  </div>
+
+  <script>
+    var preloader = document.getElementById('loader');
+
+    function preLoaderHandler() {
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1500);
+    }
+
+    window.addEventListener('load', preLoaderHandler);
+  </script>
+
+</body>
+
+</html>
